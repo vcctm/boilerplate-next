@@ -21,8 +21,8 @@ const localStorageEffect =
     })
   }
 
-export const themeAtom = atom<ThemeMode>({
-  key: 'themeAtom',
+export const themeState = atom<ThemeMode>({
+  key: 'themeState',
   default: themeMode,
   effects: [localStorageEffect('themeMode')]
 })

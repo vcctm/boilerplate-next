@@ -1,4 +1,3 @@
-import SfProWoff2 from './fonts/regular.woff2';
 import { colors } from "./colors";
 import { PaletteMode, ThemeOptions } from '@mui/material';
 
@@ -11,7 +10,7 @@ export const defaultThemeOptions = (themeMode: PaletteMode): ThemeOptions => ({
                 font-style: normal;
                 font-display: swap;
                 font-weight: 400;
-                src: url(${SfProWoff2}) format('woff2')';
+                src: url('/fonts/regular.woff2') format('woff2')';
             }
             `
         },

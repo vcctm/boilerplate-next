@@ -1,6 +1,4 @@
-import { useRecoilValue } from 'recoil';
 import { createTheme, CssBaseline, PaletteMode, ThemeProvider } from '@mui/material';
-import { themeAtom } from 'store/themeAtom';
 import { ReactElement, useMemo } from 'react';
 import { defaultThemeOptions } from 'styles/theme';
 
@@ -9,12 +7,7 @@ interface Props {
 }
 
 function AppThemeProvider({ children }: Props): ReactElement {
-  const mode = useRecoilValue(themeAtom);
-  const theme = useMemo(
-    () =>
-      createTheme(defaultThemeOptions(mode as PaletteMode)),
-    [mode]
-  );
+  const theme = createTheme(defaultThemeOptions('dark' as PaletteMode))
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import DarkModeToggle from 'components/DarkModeToggle'
 
 export const HomePage = () => {
   return (
@@ -16,9 +15,6 @@ export const HomePage = () => {
       <Typography>
         Typescript + MUIv5 + Framer Motion + Recoil + Storybook + Plop
       </Typography>
-      <Box>
-        <DarkModeToggle />
-      </Box>
     </Box>
   )
 }
